@@ -71,7 +71,7 @@ namespace HelloWorld
             {
                 var id = (JsonKeyValuePairs)kvp["_id"];
                 var username = (string)id["assignee"];
-                var plannedHoursString = kvp["estimate"].ToString();
+                var plannedHoursString = kvp["remaining"].ToString();
                 var plannedHours = double.Parse(plannedHoursString);
 
                 var teamMember = members.FirstOrDefault(x => x.Username == username);
